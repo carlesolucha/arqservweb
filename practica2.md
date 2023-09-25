@@ -88,10 +88,13 @@ También se tuvo que crear un certficado para realizar el mismo load balancer:
 ![certificado](https://github.com/carlesolucha/arqservweb/assets/73532775/c6a3af3e-fde7-44c3-8b13-d671207bad40)
 
 
+## Ej3: zero-trust: Cifrar el contenido web también dentro del cloud y quitar el HTTPS offloading.
+
 
 ## Ej4: Qué otras mejoras se te ocurrirían para mejorar la seguridad o disponibilidad del servidor web?
-
-
-	
-
-
+1) Implementar la autenticación de doble factor (2FA): Configura la autenticación de doble factor en la máquina de salto. Esto proporciona una capa adicional de seguridad para evitar accesos no autorizados a nuestro servidor.
+2) Actualizaciones y parches automáticos: Configura actualizaciones automáticas tanto en la máquina de salto como en el servidor web. Esto garantiza que estés utilizando siempre las últimas correcciones de seguridad y no usar versiones antiguas defectuosas.
+3) Monitoreo de seguridad en tiempo real: Implementa un sistema de monitoreo de seguridad en tiempo real que registre y alerte sobre actividades sospechosas o intentos de intrusión como podría ser cualquier intento de conexión desde otros países de la unión europea, uso de sqlinjection o xss scripting. Hoy en día existen herramientos creadas para este propósito en concreto.
+4) Implementar un sistema de gestión de registros (SIEM): Un SIEM te permite centralizar y analizar los registros de eventos de seguridad de tus servidores y aplicaciones. Esto te ayudará a detectar amenazas y responder de manera efectiva.
+5) Segmentación de red: Divide tu red en segmentos para aislar servicios críticos. Esto significa que incluso si un servidor se ve comprometido, el atacante tendrá dificultades para moverse lateralmente en tu infraestructura. Aunque la red es muy pequeña, tratar de segmentarlo en maquinaprincipal y máquina de salto.
+6) Copias de seguridad y recuperación de desastres: Esto parece que es algo que debería de ser obvio, pero muchas veces no lo es. Implementar un plan de copias de seguridad periódico.
