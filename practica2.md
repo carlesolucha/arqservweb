@@ -87,6 +87,7 @@ Hemos tenido que crear un NAT Gateway y configurarlo para que tuviera salida a i
 También se tuvo que crear un certficado para realizar el mismo load balancer:
 ![certificado](https://github.com/carlesolucha/arqservweb/assets/73532775/c6a3af3e-fde7-44c3-8b13-d671207bad40)
 
+NOTA: me equivoqué al escribir rápido universidad Urbana-Champaign y al final no lo cambié jajajaja.
 
 ## Ej3: zero-trust: Cifrar el contenido web también dentro del cloud y quitar el HTTPS offloading.
 
