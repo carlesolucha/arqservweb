@@ -14,6 +14,12 @@ En este firewall se crearon tres normas:
 1) bastion-to-main: se trata de dar permisos a conexiones tcp al puerto 22 de las IP's internas de la máquina de salto:
 2) allow-ssh-to-bastion: permite la conexión tcp del puerto 22 con las IP's de mi ordenador en mi casa como en ICAI.
 3) http-from-bastion: permite la conexión de la máquina de salto.
+
+Otro de los pasos que tuvimos que tener en cuenta fue la creación de máquinas virtuales. Para ello creamos dos:
+![maquinas virtuales](https://github.com/carlesolucha/arqservweb/assets/73532775/c69d2ea2-23f0-4504-a586-7f73899dbbb2)
+1)maquinaprincipal corresponde al servidor desde el que nos vamos a conectar
+2)salto corresponde al servidor de salto mediante el que nos conectaremos a la máquina principal.
+
 ### Instalación
 
 Indica cómo instalar tu proyecto y sus dependencias, si las tiene. Proporciona instrucciones paso a paso.
