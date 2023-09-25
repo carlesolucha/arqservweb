@@ -34,4 +34,30 @@ De esta manera es como hemos creado una estructura parecida a la siguiente:
 
 
 ## Ej2: introducción a los WAF: Web Application Firewall (firewall capa 7):
-En este ejercicio se nos pedía quitar la IP pública de la máquina de salto
+En este ejercicio se nos pedía quitar la IP pública de la máquinaprincipal:
+
+![quitadaipsmaquinaprincipal](https://github.com/carlesolucha/arqservweb/assets/73532775/7f3f5377-ef7f-45e2-be56-20bdef1fc7cf)
+
+Después tuvimos que crear el balanceador de carga:
+![balanceadorDeCarga](https://github.com/carlesolucha/arqservweb/assets/73532775/5cd4c8f3-21b8-4128-8ca6-f168418f9664)
+
+Sin embargo, para crear esto era necesario hacer un instancegroup al que tuvimos que meter la maquinaprincipal
+![instancegroup](https://github.com/carlesolucha/arqservweb/assets/73532775/61ec3d9d-f92d-49e1-826f-f799cb36dd09)
+
+Finalmente, tuvimos que habilitar Armor teniendo en cuenta los criterios que se nos pedían:
+![armor](https://github.com/carlesolucha/arqservweb/assets/73532775/0460c4b7-5f3f-4209-9b91-89525770c717)
+En este caso hemos denegado a todos aquellos que usen sql injection o xss scripting. Además, hemos permitido acceso a todos los países que pertenecen a la Unión Europea.
+
+Por último, aplicamos todo esto al backend que queríamos para tener mayor seguridad:
+![targets](https://github.com/carlesolucha/arqservweb/assets/73532775/26ec4908-f0c5-40fa-9f3b-f475eccd78db)
+
+Finalmente, lo que hicimos fue conectarnos mediante ssh a la máquina de salto:
+![asalto2](https://github.com/carlesolucha/arqservweb/assets/73532775/15b54820-9aa0-47d2-9da7-5ac76aeccbfa)
+
+Posteriormente, nos conectamos a maquinaprincipal y descargamos el servidor nginx comprobando que teníamo acceso a internet debido a una NATque habíamos configurado previamente:
+![amaquinaprincipal2](https://github.com/carlesolucha/arqservweb/assets/73532775/ca12cf74-5e31-487f-80b5-ecef761a8d9c)
+
+![descargarnginx](https://github.com/carlesolucha/arqservweb/assets/73532775/7c44754f-cc5f-4578-970e-b9cdcbe4fba6)
+
+![nginxfinal](https://github.com/carlesolucha/arqservweb/assets/73532775/528a0d0c-88eb-4a0d-b89b-792d0d8f2de7)
+
