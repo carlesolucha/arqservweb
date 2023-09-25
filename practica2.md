@@ -8,6 +8,7 @@ Dentro de la misma se creó una subnet llamada 'subnet' que es donde configurar�
 ![subnet](https://github.com/carlesolucha/arqservweb/assets/73532775/23eab2e1-b7ed-4703-b06c-8b0f19d4efaf)
 
 Finalmente se configuró el firewall con las premisas que necesitábamos únicamente para exponer nuestra máquina lo mínimo posible al exterior:
+
 ![firewall1](https://github.com/carlesolucha/arqservweb/assets/73532775/a74dd5fa-f6d8-4943-8be6-93601b3c3fe2)
 
 En este firewall se crearon tres normas:
