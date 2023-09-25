@@ -15,10 +15,19 @@ En este firewall se crearon tres normas:
 2) allow-ssh-to-bastion: permite la conexión tcp del puerto 22 con las IP's de mi ordenador en mi casa como en ICAI.
 3) http-from-bastion: permite la conexión de la máquina de salto.
 
-Otro de los pasos que tuvimos que tener en cuenta fue la creación de máquinas virtuales. Para ello creamos dos:
+Otro de los pasos que tuvimos que tener en cuenta fue la creación de dos máquinas virtuales de las que las dos estarán dentro de la misma subred. Para ello creamos dos:
 ![maquinas virtuales](https://github.com/carlesolucha/arqservweb/assets/73532775/c69d2ea2-23f0-4504-a586-7f73899dbbb2)
 1)maquinaprincipal corresponde al servidor desde el que nos vamos a conectar
 2)salto corresponde al servidor de salto mediante el que nos conectaremos a la máquina principal.
+
+Al final, al aplicar el comando ssh 35.208.22.222 en mi ordenador me permitirá conectarme a la máquina de salto como se puede ver en esta imagen:
+![asalto](https://github.com/carlesolucha/arqservweb/assets/73532775/5ab91e1d-aa92-41c9-9cd7-5706ba41a8f5)
+
+Después necesitaremos hacer el mismo proceso pero dentro de la máquina de salto y aplicando la IP 35.209.191.206
+![amaquinaprincipal](https://github.com/carlesolucha/arqservweb/assets/73532775/41ec00bc-ecb6-422f-a209-9906b9b3ee26)
+
+De esta manera es como hemos creado una estructura parecida a la siguiente:
+
 
 ### Instalación
 
