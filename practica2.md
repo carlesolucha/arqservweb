@@ -31,6 +31,8 @@ Después necesitaremos hacer el mismo proceso pero dentro de la máquina de salt
 ![amaquinaprincipal](https://github.com/carlesolucha/arqservweb/assets/73532775/41ec00bc-ecb6-422f-a209-9906b9b3ee26)
 
 De esta manera es como hemos creado una estructura parecida a la siguiente:
+![esquema1](https://github.com/carlesolucha/arqservweb/assets/73532775/00871e3f-83b9-40db-b01b-e3b4b9f18f86)
+
 
 
 ## Ej2: introducción a los WAF: Web Application Firewall (firewall capa 7):
@@ -81,6 +83,14 @@ Hacer "HTTPS offloading" (también conocido como SSL termination) en el balancea
 
 Hemos tenido que crear un NAT Gateway y configurarlo para que tuviera salida a internet. Finalmente hemos verificado que la MV tiene acceso a internet mediante la instalación del servidor nginx y hemos provado con páginas existentes como elpais.com
 ![pingpais](https://github.com/carlesolucha/arqservweb/assets/73532775/d7e10c72-4596-4739-935c-b51fdacd138b)
+
+También se tuvo que crear un certficado para realizar el mismo load balancer:
+![certificado](https://github.com/carlesolucha/arqservweb/assets/73532775/c6a3af3e-fde7-44c3-8b13-d671207bad40)
+
+
+
+## Ej4: Qué otras mejoras se te ocurrirían para mejorar la seguridad o disponibilidad del servidor web?
+
 
 	
 
