@@ -25,6 +25,7 @@ Al final, al aplicar el comando ssh 35.208.22.222 en mi ordenador me permitirá 
 ![asalto](https://github.com/carlesolucha/arqservweb/assets/73532775/5ab91e1d-aa92-41c9-9cd7-5706ba41a8f5)
 
 Después necesitaremos hacer el mismo proceso pero dentro de la máquina de salto y aplicando la IP 35.209.191.206
+
 ![amaquinaprincipal](https://github.com/carlesolucha/arqservweb/assets/73532775/41ec00bc-ecb6-422f-a209-9906b9b3ee26)
 
 De esta manera es como hemos creado una estructura parecida a la siguiente:
