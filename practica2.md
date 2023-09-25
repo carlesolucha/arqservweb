@@ -1,8 +1,8 @@
-# Título del Proyecto
+# Práctica 2
 
-## Descripción
+## Ej1: creación de una máquina de salto:
+Para este ejercicio, lo primero que se hizo fue crear una subred en VPC Network y crear las diferentes firewall rules (se podía haber hecho en la de defecto pero prefería hacerlo así para practicar a hacer redes)
 
-Aquí proporciona una breve descripción de tu proyecto. Explica qué hace y por qué es relevante o útil.
 
 ### Instalación
 
