@@ -61,3 +61,27 @@ Posteriormente, nos conectamos a maquinaprincipal y descargamos el servidor ngin
 
 ![nginxfinal](https://github.com/carlesolucha/arqservweb/assets/73532775/528a0d0c-88eb-4a0d-b89b-792d0d8f2de7)
 
+### ¿Qué ventajas e inconvenientes tiene el uso de https offloading en el balanceador?
+Hacer "HTTPS offloading" (también conocido como SSL termination) en el balanceador significa que el balanceador de carga es el que se encarga de cifrar y descifrar el tráfico HTTPS, mientras que el tráfico entre el balanceador y los servidores de back-end es a menudo HTTP plano o algún otro protocolo no cifrado debido a que ya nos encontramos dentro de nuestra red y "hay confianza".
+
+#### VENTAJAS	
+1) Desempeño Mejorado: Descifrar y cifrar tráfico SSL puede ser intensivo en términos de CPU. Al hacerlo en el balanceador de carga, se libera a los servidores de back-end de esta tarea, lo que puede resultar en un mejor rendimiento y tiempos de respuesta más rápidos.
+2) Centralización de Certificados SSL: Todos los certificados y claves SSL están en un solo lugar (el balanceador de carga) en lugar de estar dispersos en varios servidores. Esto facilita la gestión, renovación y rotación de certificados.
+3) Simplificación de la Configuración: La terminación SSL en el balanceador puede simplificar la configuración de los servidores de back-end, ya que no necesitan ser configurados para SSL.
+4) Inspección de Tráfico: Al descifrar el tráfico en el balanceador, se pueden aplicar reglas y políticas basadas en el contenido del tráfico, permitiendo por ejemplo la detección y bloqueo de amenazas antes de que lleguen a los servidores de back-end.
+5) Optimización del Balanceo de Carga: Con el tráfico descifrado en el balanceador, este puede tomar decisiones de balanceo basadas en el contenido de las solicitudes.
+   
+#### INCONVENIENTES
+1) Tráfico no cifrado internamente: El tráfico entre el balanceador de carga y los servidores de back-end es generalmente no cifrado. Esto podría ser una preocupación si hay riesgo de que alguien pueda interceptar este tráfico interno. Sin embargo, en entornos controlados, como un centro de datos privado o una red VPC, el riesgo suele ser mínimo.
+2) Posible Punto Único de Fallo: Si el balanceador de carga se ve comprometido, el atacante tendría acceso a todo el tráfico descifrado. Sin embargo, este riesgo puede mitigarse con adecuadas medidas de seguridad y arquitecturas de alta disponibilidad.
+3) Sobrecarga del Balanceador: Si hay una gran cantidad de tráfico HTTPS, el balanceador de carga podría enfrentarse a una alta carga de trabajo descifrando y cifrando tráfico. Sin embargo, muchos balanceadores de carga están optimizados para esta tarea.
+4) Potenciales Problemas con Aplicaciones Sensibles: Algunas aplicaciones pueden esperar un cierto encabezado o comportamiento que indique que están detrás de SSL. Estas aplicaciones podrían necesitar configuraciones adicionales para ser conscientes de que están detrás de un offloading.
+
+#### ¿Qué pasos adicionales has tenido que hacer para que la máquina pueda salir a internet para poder instalar el servidor nginx?
+
+Hemos tenido que crear un NAT Gateway y configurarlo para que tuviera salida a internet. Finalmente hemos verificado que la MV tiene acceso a internet mediante la instalación del servidor nginx y hemos provado con páginas existentes como elpais.com
+![pingpais](https://github.com/carlesolucha/arqservweb/assets/73532775/d7e10c72-4596-4739-935c-b51fdacd138b)
+
+	
+
+
