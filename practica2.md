@@ -33,12 +33,5 @@ Después necesitaremos hacer el mismo proceso pero dentro de la máquina de salt
 De esta manera es como hemos creado una estructura parecida a la siguiente:
 
 
-### Instalación
-
-Indica cómo instalar tu proyecto y sus dependencias, si las tiene. Proporciona instrucciones paso a paso.
-
-```bash
-# Ejemplo de comandos de instalación si es un proyecto de Node.js
-git clone https://github.com/tuusuario/turepositorio.git
-cd turepositorio
-npm install
+## Ej2: introducción a los WAF: Web Application Firewall (firewall capa 7):
+En este ejercicio se nos pedía quitar la IP pública de la máquina de salto
